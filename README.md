@@ -1,6 +1,9 @@
 # Implementing Authentic Counterhate Arguments
 
-This project is part of "Reproducibility challenges in research papers" and it replicates and extends the study **"Finding Authentic Counterhate Arguments: A Case Study with Public Figures"**, focusing on the identification and validation of counterhate arguments against individual-targeted online hate speech.
+This project replicates and extends the study "Finding Authentic Counterhate Arguments: A Case Study with Public Figures", focusing on the identification and validation of counterhate arguments against individual-targeted online hate speech. 
+
+This project is part of the "Reproducibility challenges in research papers" and is further documented in our reproducibility study report, which can be accessed [here](./Counterhate_Arguments_Report.pdf).
+
 
 ## 🚀 Getting Started
 
