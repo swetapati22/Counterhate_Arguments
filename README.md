@@ -1,8 +1,8 @@
 # Implementing Authentic Counterhate Arguments
 
-This project replicates and extends the study "Finding Authentic Counterhate Arguments: A Case Study with Public Figures", focusing on the identification and validation of counterhate arguments against individual-targeted online hate speech. 
+This repository contains a project replicating and extending the [EMNLP_23](https://2023.emnlp.org/) paper "Finding Authentic Counterhate Arguments: A Case Study with Public Figures". Authors: Abdullah Albanyan, Ahmed Hassan, and Eduardo Blanco, focusing on the identification and validation of counterhate arguments against individual-targeted online hate speech. 
 
-This project is part of the "Reproducibility challenges in research papers" and is further documented in our reproducibility study report, which can be accessed [here](./Counterhate_Arguments_Report.pdf).
+This project is part of the "Reproducibility challenges in research papers" and is further documented in our reproducibility study report, which can be accessed [here](./Counterhate_Arguments_Report.pdf) by Reproducibility: Sweta Pati and Swabhi Papneja
 
 
 ## 🚀 Getting Started
