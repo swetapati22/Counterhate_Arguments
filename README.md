@@ -1,109 +1,130 @@
 # Implementing Authentic Counterhate Arguments
 
-This project replicates and extends the study "Finding Authentic Counterhate Arguments: A Case Study with Public Figures", focusing on the identification and validation of counterhate arguments against individual-targeted online hate speech.
+This project replicates and extends the study **"Finding Authentic Counterhate Arguments: A Case Study with Public Figures"**, focusing on the identification and validation of counterhate arguments against individual-targeted online hate speech.
 
-Inorder to re-implement the same, do the following steps: 
+## 🚀 Getting Started
 
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/swabhipapneja/Implementing_Counter-hate_Paragraph.git
-   ```
+Follow these steps to set up and run the project:
 
-2. Navigate to the project directory:
-   ```sh
-   cd Implementing_Counter-hate_Paragraph
-   ```
-
-3. Install dependencies:
-   ```sh
-   pip install -r requirements.txt
-   ```
-
-4. Running prepare_data.py script for loading data specific to model inputs:
-   ```sh
-   python prepare_data.py --csv-file <path_to_csv_file> --level --output-dir <output_directory>
-   ```
-    Where:
-    file_path: path of the .csv data file.
-    level: the level to work on, either paragraph or article levels.
-    output_path: directory to save the processed data (default is ./Dataloaders/).
-
-   This script is responsible for preparing and pre-processing tweet and article data. It includes functions for cleaning the text data, tokenizing using a transformer model tokenizer (RoBERTa or LongFormer based on the specified level), and creating DataLoader objects for training, validation, and testing.
-   
-   Example for Article:
-   ```sh
-   python prepare_data.py --csv-file ../Data/articles.csv --level article --output-dir ../Dataloaders/
-   ```
-   Example for Paragraph:
-   ```sh
-   python prepare_data.py --csv-file ../Data/paragraphs.csv --level paragraph --output-dir ../Dataloaders/
-   ```
-   After Running these scripts respective Dataloaders folders will be created having these 3 files:
-      1. train.pth: DataLoader for the training set.
-      2. valid.pth: DataLoader for the validation set.
-      3. test.pth: DataLoader for the test set.
-
-6.  Implement the training loop for a specified number of epochs, evaluate the model on a validation dataset, and records the training and validation statistics for analysis:
-   ```sh
-   python train.py --data-dir {processed_data_path} --level {level} --output-dir {output_path}
-   ```
-Where:
-processed_data_path: directory of the processed data (default is ./Dataloaders/).
-level: the level to work on, either paragraph or article levels.
-output_path: directory to save the trained model (default is ./Output/).
-
-   Example for Article:
-   ```sh
-   python train.py --data-dir ../Dataloaders/ --level article --output-dir ../Output/
-   ```
-   Example for Paragraph:
-   ```sh
-   python train.py --data-dir ../Dataloaders/ --level paragraph --output-dir ../Output/
-   ```
-
-
-6. Evaluating a pre-trained machine learning model on a test dataset and calculating various performance metrics such as accuracy, precision, recall, and F1 score:
-   ```sh
-   python test.py --data-dir ./Dataloaders --trained-model-dir ./Output --output-dir ./Output
-   ```
-Where:
-processed_data_path: directory of the processed data (default is ./Dataloaders/).
-trained_model_path: directory of the trained model (default ./Output/).
-output_path: directory to save the predictions (default is ./Output/).
-
-   Example for Article:
-   ```sh
-   python test.py --data-dir ../Dataloaders/ --trained-model-dir ../Output/ --output-dir ../Output/
-   ```
-   Example for Paragraph:
-   ```sh
-   python test.py --data-dir ../Dataloaders/ --trained-model-dir ../Output/ --output-dir ../Output/
-   ```
-
-7. Performing Error Analysis:
-   ```sh
-   python test.py --data-dir ./Dataloaders --trained-model-dir ./Output --output-dir ./Output
-   ```
-
-   Example for Article:
-   ```sh
-   python error_analysis.py --data-dir ../Dataloaders/ --trained-model-dir ../Output/ --output-dir ../Output/
-   ```
-   Example for Paragraph:
-   ```sh
-   python error_analysis.py --data-dir ../Dataloaders/ --trained-model-dir ../Output/ --output-dir ../Output/
-   ```
-
-We have also provided 2 files that will help you run your code and replicate the results just by running these files.:
-article_script.sh and paragraph_script.sh
-
-## Citation
-
-```
-Papneja, S., & Pati, S. (2024). Implementing Authentic Counterhate Arguments. GitHub Repository, https://github.com/swabhipapneja/Implementing_Counter-hate_Paragraph
+### **1️⃣ Clone the Repository**
+```sh
+git clone https://github.com/swetapati22/Counterhate_Arguments.git
 ```
 
-The original research paper:
+### **2️⃣ Navigate to the Project Directory**
+```sh
+cd Counterhate_Arguments
+```
+
+### **3️⃣ Install Dependencies**
+Make sure you have Python installed. Then, run:
+```sh
+pip install -r requirements.txt
+```
+
+## 🔄 Data Preparation
+
+### **4️⃣ Run Data Preparation Script**
+This script loads and preprocesses the input data for the model.
+```sh
+python prepare_data.py --csv-file <path_to_csv_file> --level <level> --output-dir <output_directory>
+```
+Where:
+- `--csv-file`: Path to the `.csv` data file.
+- `--level`: Either `paragraph` or `article`.
+- `--output-dir`: Directory to save the processed data (default: `./Dataloaders/`).
+
+#### **Example Commands:**
+For Article:
+```sh
+python prepare_data.py --csv-file ../Data/articles.csv --level article --output-dir ../Dataloaders/
+```
+For Paragraph:
+```sh
+python prepare_data.py --csv-file ../Data/paragraphs.csv --level paragraph --output-dir ../Dataloaders/
+```
+
+After running this, a `Dataloaders/` folder will be created containing:
+- `train.pth` (Training set)
+- `valid.pth` (Validation set)
+- `test.pth` (Test set)
+
+## 🎯 Model Training
+
+### **5️⃣ Train the Model**
+```sh
+python train.py --data-dir <processed_data_path> --level <level> --output-dir <output_path>
+```
+Where:
+- `--data-dir`: Directory of the processed data (default: `./Dataloaders/`).
+- `--level`: Either `paragraph` or `article`.
+- `--output-dir`: Directory to save the trained model (default: `./Output/`).
+
+#### **Example Commands:**
+For Article:
+```sh
+python train.py --data-dir ../Dataloaders/ --level article --output-dir ../Output/
+```
+For Paragraph:
+```sh
+python train.py --data-dir ../Dataloaders/ --level paragraph --output-dir ../Output/
+```
+
+## 📊 Model Evaluation
+
+### **6️⃣ Evaluate the Model**
+```sh
+python test.py --data-dir <processed_data_path> --trained-model-dir <trained_model_path> --output-dir <output_path>
+```
+Where:
+- `--data-dir`: Directory of processed data (default: `./Dataloaders/`).
+- `--trained-model-dir`: Directory of trained models (default: `./Output/`).
+- `--output-dir`: Directory to save the predictions (default: `./Output/`).
+
+#### **Example Commands:**
+For Article:
+```sh
+python test.py --data-dir ../Dataloaders/ --trained-model-dir ../Output/ --output-dir ../Output/
+```
+For Paragraph:
+```sh
+python test.py --data-dir ../Dataloaders/ --trained-model-dir ../Output/ --output-dir ../Output/
+```
+
+## 🛠 Error Analysis
+
+### **7️⃣ Perform Error Analysis**
+```sh
+python error_analysis.py --data-dir <processed_data_path> --trained-model-dir <trained_model_path> --output-dir <output_path>
+```
+#### **Example Commands:**
+For Article:
+```sh
+python error_analysis.py --data-dir ../Dataloaders/ --trained-model-dir ../Output/ --output-dir ../Output/
+```
+For Paragraph:
+```sh
+python error_analysis.py --data-dir ../Dataloaders/ --trained-model-dir ../Output/ --output-dir ../Output/
+```
+
+## ⚡ Quick Run Scripts
+To simplify execution, you can run the following scripts instead of manually running all steps:
+- `article_script.sh` – Automates processing, training, and evaluation for **articles**.
+- `paragraph_script.sh` – Automates processing, training, and evaluation for **paragraphs**.
+
+## 📜 Citation
+If you use this work, please cite: (Our reproducibility work)
+```
+@misc{papneja_pati_2024,
+  author = {Papneja, S. and Pati, S.},
+  title = {Implementing Authentic Counterhate Arguments},
+  year = {2024},
+  url = {https://github.com/swetapati22/Counterhate_Arguments},
+  note = {GitHub Repository}
+}
+```
+
+### **🔍 Original Research Paper:**
 ```
 @inproceedings{albanyan-etal-2023-finding,
     title = "Finding Authentic Counterhate Arguments: A Case Study with Public Figures",
