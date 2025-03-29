@@ -4,6 +4,8 @@ This repository contains a project replicating and extending the [EMNLP_23](http
 
 This project is part of the "Reproducibility challenges in research papers" and is further documented in our reproducibility study report, which can be accessed [here](./Counterhate_Arguments_Report.pdf) by Reproducibility: Sweta Pati and Swabhi Papneja.
 
+Implementation Description through Slides: [Link to Presentation](https://github.com/swetapati22/Counterhate_Arguments/blob/main/Project_Implemetation_Description_Slides.pdf) 
+
 
 ## 🚀 Getting Started
 
@@ -115,8 +117,8 @@ To simplify execution, you can run the following scripts instead of manually run
 - `article_script.sh` – Automates processing, training, and evaluation for **articles**.
 - `paragraph_script.sh` – Automates processing, training, and evaluation for **paragraphs**.
 
-## 📜 Citation
-If you use this work, please cite: (Our reproducibility work)
+
+## Our reproducibility work
 ```
 @misc{papneja_pati_2024,
   author = {Papneja, S. and Pati, S.},
@@ -126,6 +128,8 @@ If you use this work, please cite: (Our reproducibility work)
   note = {GitHub Repository}
 }
 ```
+
+## 📜 Citation
 
 ### **🔍 Original Research Paper:**
 ```
